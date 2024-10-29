@@ -81,3 +81,15 @@ function points(games) {
   //  string.
   //  All we need to do is compare the first and last and as a result there are 3 paths.
   //  We tie and recieve one point or we win and recieve 3 or we lose and recieve 0.
+
+  //Sentence Smash
+
+  function smash (words) {
+    return words.join(" ");
+  };
+  
+  //P array of variable words
+  //R the array into a single string smashed together
+  //E ["hello", "world"] = hello world
+  //P Loop through a given array, each time extrating the content of the value at
+  // the given index and adding it to any variable

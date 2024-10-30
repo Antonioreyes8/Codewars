@@ -93,3 +93,56 @@ function points(games) {
   //E ["hello", "world"] = hello world
   //P Loop through a given array, each time extrating the content of the value at
   // the given index and adding it to any variable
+
+//Grasshopper - Grade book
+
+  function getGrade (s1, s2, s3) {
+    let averageGrade = (s1 + s2 + s3)/3;
+    
+    if (90 <= averageGrade && averageGrade <= 100){
+      return 'A'
+    }
+    else if (80 <= averageGrade && averageGrade < 90){
+      return 'B'
+    }
+    else if (70 <= averageGrade && averageGrade < 80){
+      return 'C'
+    }
+    else if (60 <= averageGrade && averageGrade < 70){
+      return 'D'
+    }
+    else if (0 <= averageGrade && averageGrade < 60){
+      return 'F'
+    }
+    
+    
+  }
+  
+  //P The three grades
+  //R Average in form of a Letter grade
+  //E 90 + 91 + 92 = A
+  //P We want to add the three grades recieved, divide by 3 and run if statement for returning
+  // letter grade
+
+// MakeUpperCase
+
+  function makeUpperCase(str) {
+    return str.toUpperCase()
+  }
+  
+  //P string
+  //R uppercase version
+  //E Hello to HELLO
+  //P take the string and run a method that returns same string in all caps
+
+
+// Third Angle of a Triangle
+
+  function otherAngle(a, b) {
+    return 180 - (a +b);
+  }
+  
+  //P two angles of a triangle
+  //R the third angle
+  //E 20, 20 and answer would be 140
+  //P Take the two angles and add them together then subtract them from 180 and return answer

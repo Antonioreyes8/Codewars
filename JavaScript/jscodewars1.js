@@ -146,3 +146,76 @@ function points(games) {
   //R the third angle
   //E 20, 20 and answer would be 140
   //P Take the two angles and add them together then subtract them from 180 and return answer
+
+  //Sum Arrays
+
+  function sum (numbers) {
+    let sum = 0;
+    
+    for(let num of numbers){
+      sum += num;
+    }
+    return sum
+  }
+  
+  //P array of numbers
+  //R sum of the numbers, or zero if there arent any in the array
+  //E [1, 2] = 3
+  //P initialize counter to 0 and run a loop through array adding all the values
+
+
+//Convert a String to a Number!
+
+  const stringToNumber = function(str){
+    return +str;
+  }
+  //P string
+  //R the string converted to a number
+  //E "1234" -> 1234
+  //P take the string and use a method to convert to number
+
+  // Convert a Number to a String!
+  function numberToString(num) {
+    return num.toString();
+  }
+
+  //Reversed sequence
+
+  const reverseSeq = n => {
+    let myArray = []
+    while (n > 0){
+      myArray.push(n);
+      n -= 1;
+    }
+    return myArray;
+  };
+  
+  //P an integer has to be more than 0
+  //R an array counting down from that number to 1
+  //E 3, [3,2,1]
+  //P create a loop and you add number to an array and then subract 1 and add that number and keep going
+
+  //Square Every Digit
+  
+  function squareDigits(num){
+
+    let splitNum = num
+      .toString()
+      .split("")
+    
+    let result = "";
+    
+    for (let i = 0; i < splitNum.length; i++) {
+      let squaredDigit = splitNum[i] ** 2;
+      
+      result += squaredDigit; 
+      
+      }
+  
+    return Number(result);
+  }
+  
+  //P number
+  //R every digit in number squared
+  //E 12 -> 14
+  //P loop through each digit and square and then concatenate the results

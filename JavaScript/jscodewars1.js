@@ -222,7 +222,7 @@ function points(games) {
 
 
   //Opposite number
-  
+
   function opposite(number) {
     let multiplied = number * 2;
     return number - multiplied
@@ -232,3 +232,23 @@ function points(games) {
   //R the negative version of that number
   //E 2 => -2
   //P Take the number and multiply by two and store that and then subract that to return
+
+
+  //Sum of positive
+  
+  function positiveSum(arr) {
+    let sum = 0;
+    for(x of arr){
+      if (x > 0){
+        sum += x;
+      }
+    }
+    return sum
+  }
+  
+  /*
+  P an array full of numbers
+  R the result of adding up all the positive values
+  E 2,3,-5,1 => 6
+  P find all positive in arr, add them up, display results
+  */

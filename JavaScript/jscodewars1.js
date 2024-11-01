@@ -219,3 +219,16 @@ function points(games) {
   //R every digit in number squared
   //E 12 -> 14
   //P loop through each digit and square and then concatenate the results
+
+
+  //Opposite number
+  
+  function opposite(number) {
+    let multiplied = number * 2;
+    return number - multiplied
+  }
+  
+  //P take one number
+  //R the negative version of that number
+  //E 2 => -2
+  //P Take the number and multiply by two and store that and then subract that to return

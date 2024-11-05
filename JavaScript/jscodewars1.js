@@ -252,3 +252,60 @@ function points(games) {
   E 2,3,-5,1 => 6
   P find all positive in arr, add them up, display results
   */
+
+
+// Grasshopper - Summation
+
+  var summation = function (num) {
+    let sum = 0;
+    
+    for(let x = num ; x>0 ;x--){
+      sum += x;
+    }
+    
+    return sum;
+  }
+  
+  /*
+  P num to represent starting point
+  R The sum of all the integers from 1 to num
+  E if the num is 3 we add 3, 2, and 1
+  P Once we obtain num, create a for loop that keeps adding results together until 1 from num to 1
+  */
+
+  // Beginner Series #1 School Paperwork
+
+  function paperwork(n, m) {
+    if ((n<1)||(m<1))
+      return 0
+    else{
+      return n*m
+      }
+  }
+  
+  /*
+  P 'n' for the amount of classmates and 'm' for the amount of pages
+  R as long as m, n are positive integers you return the product
+  E 2 students and 2 papers will equal 4 
+  P check if either m or n are integers less than 1, if so return 0 else multiply the two
+  */
+
+  //DNA to RNA Conversion
+  
+  function DNAtoRNA(dna) {
+    let rna = '';
+    
+    for(let i = 0;i < dna.length;i++)
+      if (dna[i] === 'T') {
+      rna += 'U';
+    } else {
+      rna += dna[i];
+    }
+    
+    return rna;
+  }
+  
+  //P string
+  //R converts 'T's to 'U's
+  //E TTTTT -> UUUUU
+  //P Loop through a string to find T's and change them to U's

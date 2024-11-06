@@ -291,7 +291,7 @@ function points(games) {
   */
 
   //DNA to RNA Conversion
-  
+
   function DNAtoRNA(dna) {
     let rna = '';
     
@@ -309,3 +309,53 @@ function points(games) {
   //R converts 'T's to 'U's
   //E TTTTT -> UUUUU
   //P Loop through a string to find T's and change them to U's
+
+  //A Needle in the Haystack
+
+  function findNeedle(haystack) {
+    for (let i = 0; i < haystack.length; i++) {
+      if (haystack[i] === 'needle') {
+        return 'found the needle at position ' + i; 
+      }
+    }
+  }
+  
+  //P an array with all types of inputs
+  //R the index of where string 'needle' is found at
+  //E ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]; --> found the needle at position 3
+  //P loop through the array, if 'needle' found you output 'found the needle at position' + index[i]
+
+
+  //Grasshopper - Personalized Message
+
+  function greet (name, owner) {
+    if(name === owner){
+      return 'Hello boss'
+    }
+    else{
+      return 'Hello guest';
+    }
+  }
+  
+  //P name and owner
+  //R Hello boss or Hello guest
+  //E if owner and name are the same then hello boss will be the response 
+  // 'Daniel', 'Daniel', 'Hello boss'
+  //P conditional that check if name and owner are same. If they are owner is returned if not
+  // guest is returned
+
+  //Will you make it?
+  
+  const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    if(distanceToPump - (mpg * fuelLeft) > 0){
+      return false;
+    }
+    else{
+      return true;
+    }
+  };
+  
+  //P distanceToPump, mpg, fuelLeft
+  //R True or False
+  //E if mpg is 25 and there are 2 gallons left we can only travel up to 50 miles
+  //P (mpg * fuelLeft) - distanceToPump if the result is negative you don't make it.

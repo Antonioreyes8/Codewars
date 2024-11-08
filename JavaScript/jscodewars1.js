@@ -345,7 +345,7 @@ function points(games) {
   // guest is returned
 
   //Will you make it?
-  
+
   const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     if(distanceToPump - (mpg * fuelLeft) > 0){
       return false;
@@ -359,3 +359,72 @@ function points(games) {
   //R True or False
   //E if mpg is 25 and there are 2 gallons left we can only travel up to 50 miles
   //P (mpg * fuelLeft) - distanceToPump if the result is negative you don't make it.
+
+
+  //Count by X
+
+  function countBy(x, n) {
+    let z = [];
+    let addingUp = 0;
+    
+    while(n > 0){
+      addingUp += x;
+      z.push(addingUp);
+      n--;
+    }
+    
+    
+    return z;
+  }
+  
+  //P multiple and list length
+  //R array full of numbers
+  //E 2,3 -> three multiples of 2 -> 2,4,6
+  //P Create a loop the length of the second parameter, 
+  // each time adding a number to the array and then adding the first value to restart loop
+
+  //Convert number to reversed array of digits
+
+  function digitize(n) {
+    let digits = [];
+    
+    if (n != 0) {
+      while (n > 0) {
+        digits.push(n % 10); // Get the last digit
+        n = Math.floor(n / 10); // Remove the last digit
+      }
+    }
+    else {
+      return [0];
+    }
+    
+    return digits;
+  }
+  
+  //P a random non-negative number
+  //R digits of this number within an array in reverse order
+  //E 321 -> [1,2,3]
+  //P loop at that adds each value starting from the back into an array
+
+  //Transportation on vacation
+  
+  function rentalCarCost(d) {
+    let total = d * 40;
+    
+    if (d >= 7) {
+      total -= 50; // Discount for 7 or more days
+    } else if (d >= 3) {
+      total -= 20; // Discount for 3 to 6 days
+    }
+    
+    return total;
+  }
+  
+  
+  //P days
+  //R total amount
+  //E 3 days => 100
+  //P if statement for the different cases 
+  // one for 1-2 days,
+  // one for 3 - 6 days and 
+  // one 7 or more

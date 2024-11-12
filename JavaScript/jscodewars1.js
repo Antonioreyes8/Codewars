@@ -428,3 +428,49 @@ function points(games) {
   // one for 1-2 days,
   // one for 3 - 6 days and 
   // one 7 or more
+
+  //Keep up the hoop
+
+  function hoopCount (n) {
+    if (n >= 10){
+      return 'Great, now move on to tricks'
+    }
+   else {
+     return 'Keep at it until you get it'
+   }
+}
+
+//P n for time he does hula hoop
+//R message based on number
+//E 10 times, wow you did great
+//P if n less than 10 he gets a message and if more he gets different message
+
+//Keep Hydrated!
+
+function litres(time) {
+  return Math.floor(time/2);
+}
+
+//P time
+//R .05 litres every hour
+//E If we cycle for 3 hours we drink 1.5 rounded down to 1 litres of water
+//P Divide time by 2 and round down using Math.floor
+
+
+//Will there be enough space?
+
+function enough(cap, on, wait) {
+  let result = (cap - on) - wait;
+  
+  if(result >= 0){
+    return 0;
+  }
+  else if(result < 0){
+    return -result;
+  }
+}
+
+//P cap (amount of people bus can hold), on (amount of people on), wait (amount of people waiting)
+//R enough space => 0, not enough => remainder
+//E if there is 2 people on and 5 waiting and the cap is 6 then one will have to wait for the next bus
+//P if statement to return different values for different scenarios.

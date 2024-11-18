@@ -474,3 +474,81 @@ function enough(cap, on, wait) {
 //R enough space => 0, not enough => remainder
 //E if there is 2 people on and 5 waiting and the cap is 6 then one will have to wait for the next bus
 //P if statement to return different values for different scenarios.
+
+
+//Rock Paper Scissors!
+
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    return 'Draw!';
+  }
+
+  // Define the winning conditions for p1
+  if (
+    (p1 === 'rock' && p2 === 'scissors') ||
+    (p1 === 'scissors' && p2 === 'paper') ||
+    (p1 === 'paper' && p2 === 'rock')
+  ) {
+    return 'Player 1 won!';
+  }
+
+  // If p1 didn't win and it's not a draw, p2 must have won
+  return 'Player 2 won!';
+};
+
+
+//P the two players
+//R the winner
+//E first player plays rock and the second scissors so first play wins
+//P with 2 players and 3 different scenarios
+
+function setAlarm(employed, vacation){
+  if (employed === true && vacation === false){
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+//P employed and vacation are boolean expressions
+//R a boolean that says whether or not to set an alarm
+//E if I am employed and on vacation dont put the alarm but if im not on vacation do
+//P if employed is true and vacation false return true otherwise false
+
+// L1: Set Alarm
+
+function setAlarm(employed, vacation){
+  if (employed === true && vacation === false){
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+//P employed and vacation are boolean expressions
+//R a boolean that says whether or not to set an alarm
+//E if I am employed and on vacation dont put the alarm but if im not on vacation do
+//P if employed is true and vacation false return true otherwise false
+
+//Thinkful - Logic Drills: Traffic light
+
+function updateLight(current) {
+  
+  if (current === 'green'){
+    return "yellow"
+  }
+  else if (current === 'yellow'){
+    return "red"
+  }
+  else if (current === 'red'){
+    return "green"
+  }
+
+}
+
+//P the current light color
+//R the next color
+//E if its red then return to green
+//P if statement to check what is being inputted

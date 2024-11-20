@@ -552,3 +552,58 @@ function updateLight(current) {
 //R the next color
 //E if its red then return to green
 //P if statement to check what is being inputted
+
+//All Star Code Challenge #18
+
+function strCount(str, letter) {  
+  let counter = 0;
+
+  for (let index = 0; index < str.length; index++) {
+    if (letter === str[index]) {
+      counter += 1;
+    }
+  }
+  
+  return counter;
+}
+
+// P: a string and a character
+// R: returns the amount of times the character is in the string
+// E: hello, l -> 2
+// P: loop through the string, and each time a character matches, increment the count, then return the count
+
+//Twice as old
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
+
+// P: fathers age and sons age
+// R: at what age was (or will be) the father twice the son's age
+// E: if the father is 36 and the son is 7, 36 - 2 * 7 = 22 (22 years ago)
+// P: calculate the difference between the father's age and twice the son's age, and return the absolute value
+
+//Correct the mistakes of the character recognition software
+
+function correct(string) {
+  let newString = '';
+
+  for (let index = 0; index < string.length; index++) {
+    if (string[index] === '5') {
+      newString += 'S';
+    } else if (string[index] === '0') {
+      newString += 'O';
+    } else if (string[index] === '1') {
+      newString += 'I';
+    } else {
+      newString += string[index];
+    }
+  }
+
+  return newString;
+}
+
+// P: a string
+// R: the string corrected
+// E: L0ND0N -> LONDON
+// P: loop through the input, add characters to newString, and correct mistyped characters

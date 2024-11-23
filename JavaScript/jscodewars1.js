@@ -644,3 +644,48 @@ function move (position, roll) {
 //R new position
 //E 0, 4 -> 8
 //P positiion + (multiply roll * 2)
+
+//Is it even?
+
+function testEven(n) {
+  if (n % 2 === 0){
+    return true
+  }
+else{
+  return false
+}
+}
+
+//P number
+//R boolean whether its even or not
+//E .5 -> false
+//P %2 == 0 and check that with if
+
+//Count the Digit
+
+function nbDig(n, d) {
+  let counter = 0;
+
+  for (let i = 0; i <= n; i++) {
+    let squared = i ** 2;
+    let squaredString = squared.toString();
+
+    for (let char of squaredString) {
+      if (char === d.toString()) {
+        counter++;
+      }
+    }
+  }
+
+  return counter;
+}
+
+
+//P n (bigger than 0), d (which is between 0 and 9)
+//R count of instances where d is included in the square between the numbers 0 through n
+//E if n = 5, d = 1 -> 2
+//P 1. create a counter
+//  2. loop  0 -> n, each time squaring the increment
+//  3. loop through each digit in answer
+//  4. conditional digit === d
+//  5. add to counter

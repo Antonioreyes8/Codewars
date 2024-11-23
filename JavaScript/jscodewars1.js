@@ -607,3 +607,40 @@ function correct(string) {
 // R: the string corrected
 // E: L0ND0N -> LONDON
 // P: loop through the input, add characters to newString, and correct mistyped characters
+
+//Is it a palindrome?
+
+function isPalindrome(x) {
+  let sameCase = x.toLowerCase();
+  
+  let start = 0;
+  let end = sameCase.length - 1;
+  
+  while (start < end) {
+    if (sameCase[start] !== sameCase[end]) {
+      return false;
+    }
+    start += 1;
+    end -= 1;
+  }
+  
+  return true; // If we complete the loop, it's a palindrome
+}
+
+// P: a string
+// R: a boolean
+// E: "hello" -> false, "bob" -> true
+// P: Convert the string to lowercase,
+// use two pointers to compare characters from the start and end,
+// and return false if a mismatch is found. If the loop completes, it's a palindrome.
+
+//Grasshopper - Terminal game move function
+
+function move (position, roll) {
+  return position + roll * 2
+}
+
+//P position and the spaces it moves * 2
+//R new position
+//E 0, 4 -> 8
+//P positiion + (multiply roll * 2)

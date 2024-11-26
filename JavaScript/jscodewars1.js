@@ -689,3 +689,64 @@ function nbDig(n, d) {
 //  3. loop through each digit in answer
 //  4. conditional digit === d
 //  5. add to counter
+
+//Invert values
+
+function invert(array) {
+  let negativeArray = [];
+  for(let i in array){
+    negativeArray.push(array[i]*-1);
+  }
+  
+  return negativeArray;
+}
+//P array
+//R negative version
+//E [1,2] -> [-1,-2]
+//P loop to to take current index and add the negative version of it to new array
+
+
+
+// Expressions Matter
+
+function expressionMatter(a, b, c) {
+  // Calculate all possible results
+  const results = [
+    a + b + c,
+    a * b * c,
+    a * (b + c),
+    (a + b) * c,
+    a + b * c,
+    a * b + c
+  ];
+
+  // Find the maximum value manually
+  let maxResult = results[0]; // Start with the first result
+  
+  for (let i = 1; i < results.length; i++) {
+    if (results[i] > maxResult) {
+      maxResult = results[i]; // Update maxResult if a larger value is found
+    }
+  }
+
+  return maxResult;
+}
+
+//P three numbers
+//R the highest number possible withe the operands given ((),*,+)
+//E 2,1,2 -> 6
+//P try different combinations and then compare and keep highest value.
+// 1. You create a list of combinations
+// 2. You set a max
+// 3. Loop through combinations testing results
+// 4. Replace max each time the result is greater
+
+//Grasshopper - Check for factor
+function checkForFactor (base, factor) {
+  return base % factor === 0 ? true : false ;
+}
+
+//P base and factor
+//R boolean to see if it is a factor of base
+//E 10, 2 -> true
+//P conditional for a remainder when dividing base by factor. If its 0 then it is then true else false

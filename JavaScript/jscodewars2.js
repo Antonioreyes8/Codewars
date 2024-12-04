@@ -94,3 +94,63 @@ function booleanToString(b){
   //P 1. we need a variable to change the number for each string (1, 2, 3)
   //  2. inside for loop we then need to combine the strings (n: -> a, b, c)
   //  3. return new array
+
+  //Training JS #1: create your first JS function and print "Hello World!"
+
+  function helloWorld(){
+    let str = "Hello World!";
+    console.log(str);
+  }
+  
+  //Sum Mixed Array
+
+  function sumMix(x){
+    let sum = 0;
+    
+    for(let i in x){
+      let converted = Number(x[i]);
+      sum += converted;
+    }
+    
+    return sum
+  }
+  
+  //P array with mix of integers and strings
+  //R the sum of the all values no matter if string or array
+  //E [9, 3, '7', '3'] -> 22
+  //P loop through array, convert and add to sum
+
+  //Convert a string to an array
+
+  function stringToArray(string){
+
+  let newArray = [];
+  let index = 0
+  let temporaryString = ""
+  
+  while(index < string.length){
+    
+    if(string[index] === " "){
+      newArray.push(temporaryString);
+      temporaryString = "";
+    }
+    else{
+      temporaryString += string[index];
+    }
+    
+    index += 1;
+  }
+  
+  if (temporaryString) {
+    newArray.push(temporaryString);
+  }
+
+  return newArray
+}
+
+//P string
+//R Array with each word seperated
+//E "Robin Singh" ==> ["Robin", "Singh"]
+//P 1.create array,
+//  2.loop to go through string inputted,
+//  3.each time we reach space we end that

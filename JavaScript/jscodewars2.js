@@ -154,3 +154,73 @@ function booleanToString(b){
 //P 1.create array,
 //  2.loop to go through string inputted,
 //  3.each time we reach space we end that
+
+//String repeat
+
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+//P accepts an integer and a string
+//R the string repeated n times
+//E hi * 3 => hi, hi, hi
+//P repeat it n times
+
+//Even or Odd
+function evenOrOdd(number) {
+  return number % 2 == 0 ? "Even" : "Odd";
+}
+
+//P number
+//R even or odd
+//E 4 is even and 5 is odd
+//P if i divide by two and the remainder is not 0 then its odd
+
+//Find the next perfect square!
+
+function findNextSquare(sq) {
+  if (Math.sqrt(sq) % 1 == 0){
+    let sqrtAnswer = Math.sqrt(sq);
+    return (sqrtAnswer + 1)**2;
+  }
+  else{
+    return -1;
+  }
+}
+
+//P a number (either perfect square or not)
+//R next perfect square or -1 if its not a perfect squared entered
+//E 121 -> 144
+//P 1. if statement to check if its a perfect square
+//  2. the way to find out the next, you take the square root answer
+//  3. square that and return it
+
+//Beginner Series #2 Clock
+
+function past(h, m, s){
+  return (h*3600000) + (m*60000) + (s*1000);
+}
+//P h for hours, m for minutes, and s for seconds
+//R time since midnight in miliseconds
+//E 1 second -> 1000 miliseconds, 1 minute is -> 60000 miliseconds, 1 hour is 3,600,000
+//P multiply and add to a miliseconds variable and output that
+
+//List Filtering
+
+function filter_list(l) {
+  let newArray = [];
+  
+  for(let i in l){
+    if((typeof l[i]) === "number")
+      newArray.push(l[i]);
+  }
+  
+  return newArray
+}
+//P array
+//R same string without strings
+//E [1,2,'a','b']) -> [1,2]
+//P 1. loop through array
+//  2. check its data type
+//  3. if integer add to a new array
+//  4. return array at the end

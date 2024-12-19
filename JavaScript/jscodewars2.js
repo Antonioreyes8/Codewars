@@ -224,3 +224,56 @@ function filter_list(l) {
 //  2. check its data type
 //  3. if integer add to a new array
 //  4. return array at the end
+
+//Returning Strings
+
+function greet(name){
+  return "Hello, " + name + " how are you doing today?"
+}
+
+//P name
+//R Hello, <name> how are you doing today?
+//E "Ryan", "Hello, Ryan how are you doing today?"
+//P Return string with name variable between
+
+//Regex validate PIN code
+
+function validatePIN (pin) {
+  if (pin.length !== 4 && pin.length !== 6) return false;
+  
+  for (let i in pin) {
+    if (pin[i] < '0' || pin[i] > '9') return false;
+  }
+  
+  return true
+  
+}
+
+//P a pin has to be 4 or 6 numbers
+//R true or false
+//E 1 --> false, 2222 --> true, abcd --> false
+//P 1. check the length of the string
+//  2. loop through string char checking each individual making sure its between 0 and 9 ASCII
+//  3. return true if it passes both tests
+
+//Basic Mathematical Operations
+
+function basicOp(operation, value1, value2){
+  switch(operation){
+      case "+" :
+        return value1 + value2;
+      case "-" :
+        return value1 - value2;
+      case "*" :
+        return value1 * value2;
+      case "/" :
+        return value1 / value2;
+      
+  }
+}
+
+//P operation and two integers
+//R the math result
+//E ('*', 5, 5) --> 25
+//P 1. switch case for each operation
+//  2. in each case you values and return result

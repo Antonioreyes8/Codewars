@@ -277,3 +277,171 @@ function basicOp(operation, value1, value2){
 //E ('*', 5, 5) --> 25
 //P 1. switch case for each operation
 //  2. in each case you values and return result
+
+function getSum(a, b) {
+  let numbers = [];
+  let sum = 0;
+  
+  if (a < b) {
+    for (let i = a; i <= b; i++) {
+      numbers.push(i);
+    }
+  } else {
+    for (let i = b; i <= a; i++) {
+      numbers.push(i);
+    }
+  }
+  
+  for (let num of numbers) {
+    sum += num;
+  }
+  
+  return sum;
+}
+//P two integers
+//R sum of all integers between them
+//E 1, 5 -> 1 + 2 + 3 + 4 + 5 = 15
+//P 1. sort the two numbers
+//  2. loop until larger is reached
+//  3. add to array
+//  4. loop & add all together
+//  5. return sum
+
+
+// Removing Elements
+
+function removeEveryOther(arr) {
+  
+  const result = [];
+  
+  for(let i = 0; i < arr.length; i += 2) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+
+//P array
+//R removing every other element from array
+//E 1,2,3,4 - > 1,3
+//P for loop through arr
+//  skipping by two
+//  push
+//  return
+
+//Sort array by string length
+
+function sortByLength(array) {
+  let newArray = [];
+  
+  for (let str of array) {
+    // Handle first element
+    if (newArray.length === 0) {
+      newArray.push(str);
+      continue;
+    }
+    
+    // Find correct insertion point
+    for (let i = 0; i <= newArray.length; i++) {
+      if (i === newArray.length || str.length < newArray[i].length) {
+        newArray.splice(i, 0, str);
+        break;
+      }
+    }
+  }
+  
+  return newArray;
+}
+
+//P array of strings
+//R new array sorted from shortest to longest strings
+//E ["Beg", "Life", "I", "To"]) -> ["I", "To", "Beg", "Life"]
+//P 1. create new array
+//  2. loop old array
+//  3. add first element
+//  4. splice to add new element
+//  5. return new array
+
+//Training JS #7: if..else and ternary operator
+
+function saleHotdogs(n){
+  if (n < 5){
+    return n * 100
+  }
+  else if ((n >= 5) && (n < 10)){
+    return n * 95
+  }
+  else if (n >= 10){
+    return n * 90
+  }
+}
+  //P n representing number of hotdogs
+  //R sale of hotdogs
+  //E 3 for 100 cents each will be 3 dollars
+  //P if & if else blocks to cover different scenarios
+
+  //Ones and Zeros
+
+  const binaryArrayToNumber = arr => {
+    let sum = 0;
+    let n = arr.length;
+  
+    for (let i = 0; i < n; i++) {
+      sum += arr[i] * (2 ** (n - i - 1));
+    }
+    return sum;
+  };
+  
+  //P array with 1s and 0s
+  //R binary representation of that array
+  //E [0,0,0,1] -> 1
+  //P 1. determine how many elements are in array
+  //  2. create an equation to solve
+  //  4. return sum
+
+  //Return Negative
+
+  function makeNegative(num) {
+    return num < 0 ?num:-num;
+  }
+  
+  //P number
+  //R negative version
+  //E -1 returns -1 still
+  //P if statement to check value first
+  
+  //Number of People in the Bus
+  var number = function(busStops) {
+    let off = 0;
+    let on = 0; 
+    
+    for(let i = 0; i < busStops.length; i++) {
+      off += busStops[i][1];
+      on += busStops[i][0];
+    }
+    
+    return on - off;
+  }
+  
+  //P array full of pairs
+  //R number of people at the very end
+  //E [[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]] -> 17
+  //P we just need to know what the result is at the end. So we make two loops put them into seperate variables
+  //  we create the equation and from that we get the return
+
+  //Sum of the first nth term of Series
+  
+  function SeriesSum(n) {
+    let sum = 0;
+    
+    for(let i = 0;i < n; i++){
+        sum += 1 / (1 + (i * 3));
+    }
+  
+    return sum.toFixed(2);
+  }
+  //P You are given a number n
+  //R The sum of sequence on the nth term
+  //E 2 -> 1.25
+  //P 1. start with 1/1
+  //  2. add (1/1) + (1/3*n)
+  //  3. return result

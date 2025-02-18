@@ -445,3 +445,60 @@ function saleHotdogs(n){
   //P 1. start with 1/1
   //  2. add (1/1) + (1/3*n)
   //  3. return result
+
+  //String ends with?
+  
+  function solution(str, ending){
+  
+    if (ending === ""){
+      return true
+    }
+  
+    if (ending.length > str.length) return false;
+  
+    return str.slice(-ending.length) === ending;
+  
+    
+  }
+  //P two strings
+  //R true or false
+  //E ('abcde', 'cde'), true
+  //P 1. check ending is smaller than str
+  //  2. slice str only keeping length of ending characters starting from the back
+  //  3. compare two strings
+  //  4. return true or false
+
+
+  //Two to One
+  
+  function longest(s1, s2) {
+    let newString = s1 + s2;
+    let newArray = [];
+    
+    //add to array
+    for(let i = 0; i < newString.length; i++){
+      newArray.push(newString[i]);
+    }
+    
+    //distinct only
+    newArray = newArray.filter((value, index, self) => {
+      return self.indexOf(value) === index;
+    });
+    
+    //ascending order
+    newArray.sort();
+    
+    //convert array to string
+    let result = "";
+    for(let j = 0; j < newArray.length; j++){
+      result += newArray[j];
+    }
+    
+    return result;
+  }
+  //P s1 and s2 (strings only letters)
+  //R new sorted string (alphabetically ascending), distinct letters
+  //E "aretheyhere", "yestheyarehere" -> "aehrsty"
+  //P 1. filter as your adding to new string
+  //  2. sort alphabetically
+  //  3. return array

@@ -502,3 +502,41 @@ function saleHotdogs(n){
   //P 1. filter as your adding to new string
   //  2. sort alphabetically
   //  3. return array
+
+
+  //Is this a triangle?
+  
+  function isTriangle(a,b,c)
+{
+   if((a + b > c) && (b + c > a) && (a + c > b)){
+     return true
+   }
+  else{
+    return false
+  }
+}
+//P a,b,c (integers)
+//R true or false
+//E 7,2,2 -> false
+//P check that a + b > c and b + c > a and a + c > b
+
+
+//Count the divisors of a number
+
+function getDivisorsCnt(n) {
+  let count = 0;
+
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      count++; 
+      if (i !== n / i) count++; // If divisors are not the same, count both
+    }
+  }
+
+  return count;
+}
+
+//P number(n)
+//R number of divisors
+//E 10 -> 4 (1, 2, 5, 10)
+//P 1. create count and loop through all numbers up to n

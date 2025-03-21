@@ -540,3 +540,87 @@ function getDivisorsCnt(n) {
 //R number of divisors
 //E 10 -> 4 (1, 2, 5, 10)
 //P 1. create count and loop through all numbers up to n
+// Get the Middle Character
+
+function getMiddle(s) {
+  let newString = '';
+  let mid = Math.floor(s.length / 2);
+
+  if (s.length % 2 === 0) {
+    newString += s[mid - 1];
+    newString += s[mid];
+  } else {
+    newString += s[mid];
+  }
+
+  return newString;
+}
+//P non-empty string
+//R the middle letter or letters
+//E "middle" -> "dd"
+//P First need to know if even or odd, then we need to get the characters by dividing string by two adding to new string.
+
+
+//Jaden Casing Strings
+
+String.prototype.toJadenCase = function () {
+  let words = this.split(" ")
+  let jadenCasedWords = [];
+
+  for (let word of words) {
+    jadenCasedWords.push(word.charAt(0).toUpperCase() + word.slice(1));
+  }
+
+  return jadenCasedWords.join(" ");
+};
+
+
+//P String
+//R Same string but uppercase for first letter of everyword
+//E "How can mirrors be real if our eyes aren't real" -> "How Can Mirrors Be Real If Our Eyes Aren't Real"
+//P split the words into array, capitalize each word, add to jadenCasedWords, return them back as a string with space between them
+
+
+//Categorize New Member
+
+function openOrSenior(data){
+  let newArray = []
+  for (let i in data){
+    let age = data[i][0]; // First value (age)
+    let handicap = data[i][1]; // Second value (handicap)
+    
+    if (age >= 55 && handicap > 7){
+      newArray.push('Senior');
+    }
+    else{
+      newArray.push('Open');
+    }
+  }
+  
+  return newArray
+}
+//P array within array with two numbers
+//R Whether Open category or Senior
+//E input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+//  output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+//P 1. Loop through first barrier of arrays, loop through second barrier
+//  2. Logic for both numbers
+//  3. add into newArray
+//  4. return newArray
+
+//Grasshopper - Terminal game combat function
+
+function combat(health, damage) {
+  
+  let newHealth = health - damage;
+  if (newHealth <= 0){
+    console.log("Health cannot go below 0")
+    return 0
+  }
+  return newHealth
+  
+}
+//P health and damage
+//R new health
+//E 92, 8 84
+//P health - damage
